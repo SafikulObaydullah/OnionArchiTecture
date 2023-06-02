@@ -15,5 +15,6 @@ namespace Repository.IRepository
         CustomerInfo GetById(int id);
 
         int Update(int id, UpdateCustomerInfo updateCustomer);
+        int Delete(int id);
     }
 }

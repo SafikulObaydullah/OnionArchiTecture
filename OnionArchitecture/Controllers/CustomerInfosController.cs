@@ -15,14 +15,14 @@ namespace OnionArchitecture.Controllers
 {
    [Route("api/[controller]")]
    [ApiController]
-   public class CountryInfosController : ControllerBase
+   public class CustomerInfosController : ControllerBase
     {
         #region Property
         private readonly ICustomerInfoService _customerService;
         #endregion
 
         #region Constructor
-        public CountryInfosController(ICustomerInfoService countryService)
+        public CustomerInfosController(ICustomerInfoService countryService)
         {
          _customerService = countryService;
         }
@@ -58,9 +58,9 @@ namespace OnionArchitecture.Controllers
         }
         [AllowAnonymous]
         [HttpPut(nameof(UpdateCustomer))]
-        public IActionResult UpdateCustomer(int id,UpdateCustomerInfo customerInfo)
+        public IActionResult UpdateCustomer(int id,UpdateCustomerInfo updateInfo)
         {
-            _customerService.UpdateCustomer(id, customerInfo);
+            _customerService.UpdateCustomer(id, updateInfo);
             return Ok("Updation done");
 
         }

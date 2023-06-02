@@ -8,5 +8,9 @@ namespace MVCClient.Controllers
       {
          return View();
       }
+      public IActionResult CustomerInfo()
+      {
+         return View();
+      }
    }
 }
