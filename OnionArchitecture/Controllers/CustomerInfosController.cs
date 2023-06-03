@@ -17,18 +17,15 @@ namespace OnionArchitecture.Controllers
    [ApiController]
    public class CustomerInfosController : ControllerBase
     {
-        #region Property
         private readonly ICustomerInfoService _customerService;
-        #endregion
-
-        #region Constructor
+       
         public CustomerInfosController(ICustomerInfoService countryService)
         {
          _customerService = countryService;
         }
-      #endregion
+     
 
-      [HttpGet(nameof(GetCustomer))]
+        [HttpGet(nameof(GetCustomer))]
         public IActionResult GetCustomer(int id)
         {
             var result = _customerService.GetCustomer(id);

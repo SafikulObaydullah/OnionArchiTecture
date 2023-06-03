@@ -73,7 +73,7 @@ namespace Repository
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    //country.Id = Convert.ToInt32(reader["id"]);
+                    country.Id = Convert.ToInt32(reader["id"]);
                     country.CustomerName = reader["customerName"].ToString();
                     country.PurchasesProduct = reader["purchasesProduct"].ToString();
                     country.PaymentType = reader["paymentType"].ToString();
@@ -148,8 +148,9 @@ namespace Repository
             int rowsAffected = 0;
             try
             {
-               var command = new SqlCommand("exec onionarcDb.dbo.spDeleteCountryInfo @Id='" + id +"'", connection);
+               var command = new SqlCommand("onionarcDb.dbo.spDeleteCustomerInfo @Id='" + id +"'", connection);
                connection.Open();
+               //GetAll();
                rowsAffected = command.ExecuteNonQuery();
                connection.Close();
             }

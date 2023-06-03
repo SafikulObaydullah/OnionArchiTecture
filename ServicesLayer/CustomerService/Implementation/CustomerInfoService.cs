@@ -19,7 +19,7 @@ namespace ServicesLayer.CustomerService.Implementation
       }
       public void DeleteCustomer(int id)
       {
-         _repository.GetById(id);
+         _repository.Delete(id);
       }
 
       public IEnumerable<CustomerInfo> GetAllCustomer()
