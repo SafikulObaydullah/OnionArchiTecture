@@ -87,8 +87,8 @@ function load() {
             var html = "<tr><td>" + v.customerName + "</td>" +
                "<td>" + v.purchasesProduct + "</td>" +
                " <td>" + v.paymentType + "</td>" +
-               " <td> <button onClick='Edit(" + v.id + ")'>Edit </button></td>" +
-               " <td> <button onClick='Delete(" + v.id + ")'>Delete </button></td></tr>";
+                 " <td> <button onClick='Edit(" + v.id + ")'><i class='fa-solid fa-pen-to-square'></i> </button></td>" +
+                 " <td> <button onClick='Delete(" + v.id + ")'><i class='fa-solid fa-trash'></i> </button></td></tr>";
 
             $("#tble tbody").append(html)
          })
@@ -132,16 +132,16 @@ function Update() {
       CustomerName: $("#txtCustomerName").val(),
       PurchasesProduct: $("#txtPurchasesProduct").val(),
       PaymentType: $("#txtPaymentType").val()
-   }
-   $.ajax({
+    }
+    console.log(updateInfo);
+    $("#MyModal").modal('hide');
+    $.ajax({
       url: url,
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       type: "Put",
-
       data: JSON.stringify(updateInfo),
-      success: function (result) {
-         $("#MyModal").modal('hide');
+       success: function (result) {
          $("#MyModal").modal({
             //backdrop: 'static',
             //keyboard: false,

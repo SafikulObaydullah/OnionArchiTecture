@@ -3,12 +3,14 @@
    //Layout = "~/Views/Shared/_AdminLayoutPage.cshtml";
 }
 
-<h2>All ClassName</h2>
+<h2 style="text-align:center">Customer Information</h2>
 <div class="float-r">
    <button style="font-size:20px;" title="Add Customers" id="btnModal"
            data-toggle="modal" data-target="#MyModal">
-      @*<i class="fa fa-plus"></i>*@
-      Add<br />
+        <i class="fa-solid fa-plus"></i>
+        <br />
+        <br />
+      @*Add<br />*@
    </button>
 </div>
 <table class="table table-bordered" id="tble">
@@ -39,7 +41,7 @@
          </div>
          <div class="modal-body">
             <div class="form-group">
-               <label>ID</label>
+               @*<label>ID</label>*@
                <input type="number" id="txtId" hidden />
                <label>CustomerName</label>
                <input type="text" class="form-control" id="txtCustomerName" />

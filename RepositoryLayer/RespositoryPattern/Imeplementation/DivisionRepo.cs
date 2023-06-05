@@ -13,7 +13,7 @@ namespace Repository
 {
    public class DivisionRepo : IDivisionRepo
    {
-      private SqlConnection connection = new SqlConnection("Server=DESKTOP-HJ8UUA1\\SQLEXPRESS01;Database=GEODB;Trusted_Connection=True;MultipleActiveResultSets=True;");
+      private SqlConnection connection = new SqlConnection("Server=DESKTOP-MV6UQ21\\SQLEXPRESS;Database=GEODB;Trusted_Connection=True;MultipleActiveResultSets=True;");
       public int Create(CreateDivision crate)
       {
          throw new NotImplementedException();
