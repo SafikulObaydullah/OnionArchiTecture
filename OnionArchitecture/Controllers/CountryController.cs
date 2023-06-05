@@ -13,67 +13,63 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CountryController : ControllerBase
+   [Route("api/[controller]")]
+   [ApiController]
+   public class CountryController : ControllerBase
     {
-        public CountryController()
+        #region Property
+        private readonly ICountryService _customerService;
+        #endregion
+
+        #region Constructor
+        public CountryController(ICountryService countryService)
         {
-                
+         _customerService = countryService;
         }
-        //#region Property
-        //private readonly ICountryService _customerService;
-        //#endregion
+      #endregion
 
-        //#region Constructor
-        //public CountryController(ICountryService countryService)
-        //{
-        //    _customerService = countryService;
-        //}
-        //#endregion
+      [HttpGet(nameof(GetCountry))]
+        public IActionResult GetCountry(int id)
+        {
+            var result = _customerService.GetCountry(id);
+            if(result is not null)
+            {
+                return Ok(result);
+            }
+            return BadRequest("No records found");
+            
+        }
+        [HttpGet(nameof(GetAllCountry))]
+        public IActionResult GetAllCountry()
+        {
+            var result = _customerService.GetAllCountry();
+            if (result is not null)
+            {
+                return Ok(result);
+            }
+            return BadRequest("No records found");
 
-        //[HttpGet(nameof(GetCountry))]
-        //public IActionResult GetCountry(int id)
-        //{
-        //    var result = _customerService.GetCountry(id);
-        //    if (result is not null)
-        //    {
-        //        return Ok(result);
-        //    }
-        //    return BadRequest("No records found");
+        }
+        [HttpPost(nameof(InsertCountry))]
+        public IActionResult InsertCountry(CreateCountry country)
+        {
+           _customerService.InsertCountry(country);
+            return Ok("Data inserted");
+        }
+        [AllowAnonymous]
+        [HttpPut(nameof(UpdateCountry))]
+        public IActionResult UpdateCountry(int id,UpadteCountry country)
+        {
+            _customerService.UpdateCountry(id, country);
+            return Ok("Updation done");
 
-        //}
-        //[HttpGet(nameof(GetAllCountry))]
-        //public IActionResult GetAllCountry()
-        //{
-        //    var result = _customerService.GetAllCountry();
-        //    if (result is not null)
-        //    {
-        //        return Ok(result);
-        //    }
-        //    return BadRequest("No records found");
+        }
+        [HttpDelete(nameof(DeleteCountry))]
+        public IActionResult DeleteCountry(int Id)
+        {
+            _customerService.DeleteCountry(Id);
+            return Ok("Data Deleted");
 
-        //}
-        //[HttpPost(nameof(InsertCountry))]
-        //public IActionResult InsertCountry(CreateCountry country)
-        //{
-        //    _customerService.InsertCountry(country);
-        //    return Ok("Data inserted");
-        //}
-        //[AllowAnonymous]
-        //[HttpPut(nameof(UpdateCountry))]
-        //public IActionResult UpdateCountry(int id, UpadteCountry country)
-        //{
-        //    _customerService.UpdateCountry(id, country);
-        //    return Ok("Updation done");
-
-        //}
-        //[HttpDelete(nameof(DeleteCountry))]
-        //public IActionResult DeleteCountry(int Id)
-        //{
-        //    _customerService.DeleteCountry(Id);
-        //    return Ok("Data Deleted");
-
-        //}
+        }
     }
 }

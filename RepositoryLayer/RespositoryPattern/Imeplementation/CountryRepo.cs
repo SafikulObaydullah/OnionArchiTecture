@@ -15,7 +15,7 @@ namespace Repository
     public class CountryRepo : ICountryInfoRepo
     {
         private SqlConnection connection =
-                new SqlConnection("Server=DESKTOP-MV6UQ21\\SQLEXPRESS;Database=onionarcDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+                new SqlConnection("Server=DESKTOP-HJ8UUA1\\SQLEXPRESS01;Database=onionarcDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         //Get All
         public List<CreateCountry> GetAll()
