@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+
+	<title>
+		How to remove a table row
+		from table
+	</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+
+	<style>
+		#myCol {
+			background: green;
+		}
+
+		table {
+			color: white;
+		}
+
+		#Geek_p {
+			color: green;
+			font-size: 30px;
+		}
+
+		td {
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<h1 style="color:green;">
+			GeeksForGeeks
+		</h1>
+
+		<table>
+			<colgroup>
+				<col id="myCol"
+					  span="2">
+				<col style="background-color:green">
+			</colgroup>
+
+			<tr>
+				<th>S.No</th>
+				<th>Title</th>
+				<th>Geek_id</th>
+			</tr>
+			<tr id="row1">
+				<td>Geek_1</td>
+				<td>GeekForGeeks</td>
+				<th>Geek_id_1</th>
+			</tr>
+			<tr>
+				<td>Geek_2</td>
+				<td>GeeksForGeeks</td>
+				<th>Geek_id_2</th>
+			</tr>
+		</table>
+		<br>
+
+		<button onclick="Geeks()">
+			Click here
+		</button>
+
+		<!-- Script to remove table row from table -->
+		<script>
+			function Geeks() {
+				$("#row1").remove();
+			}
+		</script>
+	</center>
+</body>
+</html>
