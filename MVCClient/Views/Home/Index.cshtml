@@ -1,8 +1,66 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>Kendo UI Snippet</title>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+   <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/6.3.0/default/default-ocean-blue.css" />
+
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="https://kendo.cdn.telerik.com/2023.1.425/js/kendo.all.min.js"></script>
+</head>
+<body>
+   <h1>My CryptoCurrency Dashboard</h1>
+   <div id="splitter">
+      <div id="left-pane"><div id="tabs"></div></div>
+      <div id="right-pane">
+         <h3> Trading Pair :<span id="trading-pair"></span></h3>
+         <input id="picker"/>
+         <div id="button-group"></div>
+         <div id="chart"></div>
+         <div id="picker"></div>
+
+      </div>
+   </div>
+   <script>
+      $('#chart').kendoChart({
+         tooltip:{
+            visible:true,
+         },
+         legend:{
+            poistion:'bottom'
+         },
+         series:[{
+            name:'Last Price',
+            field:'Price',
+            type:'line',
+            style:'normal',
+            markers:{
+               visible:false,
+            }
+         }]
+      });
+      $('#picker').kendoDateTimePicker({
+         dateInput:true,
+         format:'MM/dd/yyyy h tt',
+         interval:60,
+         value:new Date(),
+         disableDate:function(date){
+            var now = new Date();
+            if(date>now){
+               return true;
+            }
+            else{
+               return false;
+            }
+         },
+         change:function(){
+            var time = this.value().getTime();
+            var now = new Date().getTime();
+            var hours = Math.round((now -time)/3.6e6)
+            updateChart(tradingPair,hours);
+         }
+      })
+   </script>
+</body>
+</html>

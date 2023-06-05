@@ -75,6 +75,7 @@ function Close() {
    // }
 }
 function load() {
+   var sl = 1;
    $.ajax({
       url: "https://localhost:44395/api/CustomerInfos/GetAllCustomer",
       type: "JSON",
@@ -83,18 +84,22 @@ function load() {
          //console.log(result)
          $("#tble tbody").empty();
          $.each(result, function (i, v) {
-            //console.log(v)
-            var html = "<tr><td>" + v.customerName + "</td>" +
+            /*console.log(v)*/
+            
+            var html = "<tr><td>" + sl + "</td>" +
+               "<td> " + v.customerName + "</td> " +
                "<td>" + v.purchasesProduct + "</td>" +
                " <td>" + v.paymentType + "</td>" +
                " <td> <button onClick='Edit(" + v.id + ")'>Edit </button></td>" +
                " <td> <button onClick='Delete(" + v.id + ")'>Delete </button></td></tr>";
-
+            sl = sl + 1;
             $("#tble tbody").append(html)
+            
          })
+         /*sl = sl + 1;*/
       },
       error: function (er) {
-         console.log(er)
+         /*console.log(er)*/
       }
    })
 }
@@ -127,12 +132,14 @@ function Update() {
    var Id = $('#txtId').val();
    /*alert(Id);*/
    var url = "https://localhost:44395/api/CustomerInfos/UpdateCustomer?id=" + Id;
+   
    var updateInfo = {
       Id: $('#txtId').val(),
       CustomerName: $("#txtCustomerName").val(),
       PurchasesProduct: $("#txtPurchasesProduct").val(),
       PaymentType: $("#txtPaymentType").val()
    }
+   $("#MyModal").modal('hide');
    $.ajax({
       url: url,
       contentType: "application/json; charset=utf-8",
@@ -141,7 +148,7 @@ function Update() {
 
       data: JSON.stringify(updateInfo),
       success: function (result) {
-         $("#MyModal").modal('hide');
+         /*$("#MyModal").modal('hide');*/
          $("#MyModal").modal({
             //backdrop: 'static',
             //keyboard: false,
@@ -167,6 +174,7 @@ function Update() {
 function Delete(id) {
    /*alert(id);*/
    var url = "https://localhost:44395/api/CustomerInfos/DeleteCustomer?id=" + id;
+   
    $.ajax({
       url: url,
       contentType: "application/json; charset=utf-8",
@@ -176,7 +184,8 @@ function Delete(id) {
          load()
       },
       error: function (msg) {
-         alert(msg);
+         /*alert(msg);*/
+         load();
       }
    });
 }
