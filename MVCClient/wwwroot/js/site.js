@@ -57,6 +57,7 @@
    //}
 
 })
+
 function clearALl() {
    $("#txtCustomerName").val(''),
       $("#txtPurchasesProduct").val(''),
