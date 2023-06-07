@@ -35,7 +35,6 @@ function performSearch(event) {
       $("img").attr('src', "");
       $("#city-weather").text("");
    });
-
 }
 
 function formatSearchResults(jsonObject) {
