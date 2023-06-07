@@ -4,4 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ADO.Net.Client.Core" Version="1.4.5" />
+    <PackageReference Include="datatables.net" Version="1.13.4" />
+    <PackageReference Include="datatables.net-select" Version="1.6.2" />
+    <PackageReference Include="jQuery" Version="3.5.1" />
+    <PackageReference Include="jquery.datatables" Version="1.10.15" />
+    <PackageReference Include="jquery.dataTables.multiselect" Version="1.0.0" />
+    <PackageReference Include="jQuery.Validation" Version="1.19.5" />
+  </ItemGroup>
+
 </Project>
