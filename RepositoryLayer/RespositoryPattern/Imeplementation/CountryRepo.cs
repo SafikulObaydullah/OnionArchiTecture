@@ -35,7 +35,7 @@ namespace Repository
                 while (reader.Read())
                 {
                     var country = new CreateCountry();
-                     country.Id = Convert.ToInt32(reader["Id"]);
+                     country.Id = Convert.Toint(reader["Id"]);
                      country.Name = reader["name"].ToString();
                      country.dteCreatedAt = Convert.ToDateTime(reader["dteCreatedAt"]);
                      country.CreatedBy = reader["CreatedBy"].ToString();
@@ -76,7 +76,7 @@ namespace Repository
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    //country.Id = Convert.ToInt32(reader["id"]);
+                    //country.Id = Convert.Toint(reader["id"]);
                     country.Name = reader["name"].ToString();
                     country.dteCreatedAt = Convert.ToDateTime(reader["dteCreatedAt"]);
                     country.CreatedBy = reader["CreatedBy"].ToString();

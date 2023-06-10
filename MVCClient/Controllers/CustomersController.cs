@@ -12,5 +12,14 @@ namespace MVCClient.Controllers
       {
          return View();
       }
+      public IActionResult DatatablesView()
+      {
+         return View();
+      }
+      public IActionResult BootstrapView()
+      {
+         return View();
+      }
+      
    }
 }

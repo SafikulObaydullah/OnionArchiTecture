@@ -15,7 +15,7 @@ namespace Repository
     public class CustomerInfoRepo : ICustomerRepo
    {
         private SqlConnection connection =
-                new SqlConnection("Server=DESKTOP-HJ8UUA1\\SQLEXPRESS01;Database=onionarcDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
+                new SqlConnection("Server=DESKTOP-MV6UQ21\\SQLEXPRESS;Database=onionarcDb;Trusted_Connection=True;MultipleActiveResultSets=True;");
 
         //Get All
         public List<CustomerInfo> GetAll()
@@ -35,7 +35,7 @@ namespace Repository
                 while (reader.Read())
                 {
                      var customer = new CustomerInfo();
-                     customer.Id = Convert.ToInt32(reader["Id"]);
+                     customer.Id = Convert.Toint(reader["Id"]);
                      customer.CustomerName = reader["customerName"].ToString();
                      customer.PurchasesProduct = reader["purchasesProduct"].ToString();
                      customer.PaymentType = reader["paymentType"].ToString();
@@ -73,7 +73,7 @@ namespace Repository
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    country.Id = Convert.ToInt32(reader["id"]);
+                    country.Id = Convert.Toint(reader["id"]);
                     country.CustomerName = reader["customerName"].ToString();
                     country.PurchasesProduct = reader["purchasesProduct"].ToString();
                     country.PaymentType = reader["paymentType"].ToString();
