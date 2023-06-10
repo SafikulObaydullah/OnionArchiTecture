@@ -53,7 +53,7 @@ namespace MVCClient
          app.UseStaticFiles();
          app.UseCors("AllowOrigin");
          app.UseRouting();
-
+         app.UseStaticFiles();
          app.UseAuthorization();
 
          app.UseEndpoints(endpoints =>
