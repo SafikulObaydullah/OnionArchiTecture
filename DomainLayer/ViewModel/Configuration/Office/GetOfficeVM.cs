@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Configuration.Office
+namespace DomainLayer.ViewModel.Configuration.Office
 {
     public class GetOfficeVM
     {

@@ -1,6 +1,4 @@
-﻿using DIFECMS.Domain.Models;
-using DIFECMS.Domain.Models.Configuration;
-using DIFECMS.Domain.ViewModel;
+﻿
 using DomainLayer.Models.Configuration;
 using DomainLayer.ViewModel;
 using System;

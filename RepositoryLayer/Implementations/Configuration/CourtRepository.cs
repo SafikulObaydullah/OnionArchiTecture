@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Repository.Implementations.Configuration
+namespace RepositoryLayer.Contracts.Configuration
 {
     public class CourtRepository : ICourtRepository
     {

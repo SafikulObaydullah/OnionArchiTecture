@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Report
+namespace DomainLayer.ViewModel.Report
 {
     public class OfficeAndCourtWiseReportVM
     {

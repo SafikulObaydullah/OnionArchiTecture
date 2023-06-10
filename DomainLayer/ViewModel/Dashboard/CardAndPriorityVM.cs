@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Dashboard
+namespace DomainLayer.ViewModel.Dashboard
 {
     public class CardAndPriorityVM
     {

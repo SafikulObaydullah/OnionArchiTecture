@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Configuration.CourtType
+namespace DomainLayer.ViewModel.Configuration.CourtType
 {
     public class GetCourtTypeVM
     {

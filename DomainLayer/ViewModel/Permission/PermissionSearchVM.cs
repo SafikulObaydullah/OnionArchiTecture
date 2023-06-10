@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Permission
+namespace DomainLayer.ViewModel.Permission
 {
     public class PermissionSearchVM
     {

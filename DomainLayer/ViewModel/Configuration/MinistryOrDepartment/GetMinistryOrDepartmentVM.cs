@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Configuration.MinistryOrDepartment
+namespace DomainLayer.ViewModel.Configuration.MinistryOrDepartment
 {
     public class GetMinistryOrDepartmentVM
     {

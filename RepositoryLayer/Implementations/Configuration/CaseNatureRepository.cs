@@ -2,7 +2,7 @@
 using DIFECMS.Domain;
 using DIFECMS.Domain.Models.Configuration;
 using DIFECMS.Domain.ViewModel;
-using DIFECMS.Repository.Contracts.Configuration;
+using RepositoryLayer.Contracts.Configuration;
 using EntityFrameworkCore.RawSQLExtensions.Extensions;
 using Microsoft.Data.SqlClient;
 using System;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Repository.Implementations.Configuration
+namespace RepositoryLayer.Contracts.Configuration
 {
     public class CaseNatureRepository : ICaseNatureRepository
     {

@@ -1,10 +1,10 @@
-﻿using System;
+﻿   using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DIFECMS.Domain.ViewModel.Configuration.Office
+namespace DomainLayer.ViewModel.Configuration.Office
 {
     public class UserBasedOfficeVM
     {
