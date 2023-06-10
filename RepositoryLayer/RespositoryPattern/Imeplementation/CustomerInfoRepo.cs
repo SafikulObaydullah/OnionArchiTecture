@@ -35,7 +35,7 @@ namespace Repository
                 while (reader.Read())
                 {
                      var customer = new CustomerInfo();
-                     customer.Id = Convert.ToInt32(reader["Id"]);
+                     customer.Id = Convert.Toint(reader["Id"]);
                      customer.CustomerName = reader["customerName"].ToString();
                      customer.PurchasesProduct = reader["purchasesProduct"].ToString();
                      customer.PaymentType = reader["paymentType"].ToString();
@@ -73,7 +73,7 @@ namespace Repository
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    country.Id = Convert.ToInt32(reader["id"]);
+                    country.Id = Convert.Toint(reader["id"]);
                     country.CustomerName = reader["customerName"].ToString();
                     country.PurchasesProduct = reader["purchasesProduct"].ToString();
                     country.PaymentType = reader["paymentType"].ToString();

@@ -31,9 +31,9 @@ namespace Repository
             while (reader.Read())
             {
                var division = new GetDivision();
-               division.Id = Convert.ToInt32(reader["intId"]);
+               division.Id = Convert.Toint(reader["intId"]);
                division.Name = reader["strName"].ToString();
-               division.intcountryId = Convert.ToInt32(reader["intCountryId"]);
+               division.intcountryId = Convert.Toint(reader["intCountryId"]);
                division.CreatedBy = reader["strCreatedBy"].ToString();
                division.CreatedAt = Convert.ToDateTime(reader["dteCreatedAt"]);
                division.UpdatedBy = reader["strUpdatedBy"] == null ? "" : reader["strUpdatedBy"].ToString();
