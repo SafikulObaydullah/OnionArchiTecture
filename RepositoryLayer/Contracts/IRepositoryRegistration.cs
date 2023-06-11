@@ -1,11 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using DomainLayer.Models.Accounts;
+using DomainLayer.ViewModel;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DIFECMS.Repository.Contracts
+namespace RepositoryLayer.Contracts
 {
     public interface IRepositoryRegistration
     {

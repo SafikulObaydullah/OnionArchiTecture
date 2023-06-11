@@ -1,4 +1,6 @@
-﻿namespace DomainLayer.ViewModel.Configuration.CaseCategory
+﻿using System;
+
+namespace DomainLayer.ViewModel.Configuration.CaseCategory
 {
     public class CaseCategoryVM
     {

@@ -1,13 +1,10 @@
-﻿using DIFECMS.Domain.Models;
-using DIFECMS.Domain.ViewModel.Report;
-using System;
+﻿using DomainLayer.Models.Accounts;
+using DomainLayer.ViewModel;
+using DomainLayer.ViewModel.Report;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DIFECMS.Repository.Contracts
+namespace RepositoryLayer.Contracts
 {
     public interface IReportRepository
     {

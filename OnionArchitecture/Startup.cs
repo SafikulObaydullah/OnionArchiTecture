@@ -39,10 +39,10 @@ namespace OnionArchitecture
             services.AddCors();
             #region Connection String
             services.AddDbContext<ApplicationDbContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
-            #endregion
+         #endregion
 
-            #region Services Injected
-            services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
+         #region Services Injected
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddScoped(typeof(ICountryInfoRepo), typeof(CountryRepo));
             services.AddTransient<ICountryService, CountryService>();

@@ -2,7 +2,6 @@
 using DomainLayer.Models.Request;
 using DomainLayer.Models.Response;
 using Repository.IRepository;
-using RepositoryLayer.RespositoryPattern;
 using ServicesLayer.CustomerService.ServiceInterface;
 using System;
 using System.Collections.Generic;

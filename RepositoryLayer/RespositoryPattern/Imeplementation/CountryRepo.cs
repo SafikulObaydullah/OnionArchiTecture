@@ -1,8 +1,6 @@
-﻿using DomainLayer.Models;
+﻿
 using DomainLayer.Models.Request;
-using DomainLayer.Models.Response;
 using Microsoft.Data.SqlClient;
-
 using Repository.IRepository;
 using System;
 using System.Collections.Generic;
@@ -35,7 +33,7 @@ namespace Repository
                 while (reader.Read())
                 {
                     var country = new CreateCountry();
-                     country.Id = Convert.Toint(reader["Id"]);
+                     country.Id = Convert.ToInt16(reader["Id"]);
                      country.Name = reader["name"].ToString();
                      country.dteCreatedAt = Convert.ToDateTime(reader["dteCreatedAt"]);
                      country.CreatedBy = reader["CreatedBy"].ToString();

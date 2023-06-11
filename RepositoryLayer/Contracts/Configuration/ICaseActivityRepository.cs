@@ -1,14 +1,13 @@
-﻿using DIFECMS.Domain.Models.Configuration;
-using DIFECMS.Domain.ViewModel;
-using DIFECMS.Domain.ViewModel.Configuration.CaseActivity;
-using DomainLayer.Models.Configuration;
+﻿using DomainLayer.Models.Configuration;
 using DomainLayer.ViewModel;
-using DomainLayer.ViewModel.Configuration.CaseActivity;
+using System;
+using System.Collections.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DomainLayer.ViewModel.Configuration.CaseActivity;
 
 namespace RepositoryLayer.Contracts.Configuration
 {

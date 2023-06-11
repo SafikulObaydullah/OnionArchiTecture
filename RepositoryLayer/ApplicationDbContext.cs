@@ -21,9 +21,9 @@ namespace RepositoryLayer
 
          base.OnModelCreating(modelBuilder);
       }
-      //public DbSet<CreateCountry> Cuountry { get; set; } 
-      //public DbSet<UpadteCountry> UpadteCountries { get; set; } 
-      //public DbSet<GetCountry> GetCountries { get; set; } 
+      //public DbSet<CreateCountry> Cuountry { get; set; }
+      //public DbSet<UpadteCountry> UpadteCountries { get; set; }
+      //public DbSet<GetCountry> GetCountries { get; set; }
       //public DbSet<CustomerInfo> CustomerInfos { get; set; }
       public DbSet<Activity> Activities { get; set; }
       public DbSet<CaseActivity> CaseActivities { get; set; }

@@ -1,6 +1,8 @@
-﻿using DIFECMS.Domain.Models;
+﻿using DomainLayer.Models.Accounts;
+using DomainLayer.ViewModel;
+using System.Collections.Generic;
 
-namespace DIFECMS.Repository.Contracts
+namespace RepositoryLayer.Contracts
 {
     public interface ICaseListRepository
     {

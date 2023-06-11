@@ -1,13 +1,10 @@
-﻿using DIFECMS.Domain.ViewModel;
-using DIFECMS.Domain.ViewModel.Permission;
-using DIFECMS.Domain.ViewModel.User;
-using System;
+﻿using DomainLayer.Models.Accounts;
+using DomainLayer.ViewModel;
+using DomainLayer.ViewModel.Permission;
+using DomainLayer.ViewModel.User;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DIFECMS.Repository.Contracts
+namespace RepositoryLayer.Contracts
 {
     public interface IAdminRepository
     {
