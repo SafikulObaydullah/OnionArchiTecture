@@ -24,6 +24,8 @@ namespace MVCClient
       public void ConfigureServices(IServiceCollection services)
       {
          services.AddControllersWithViews();
+         services.AddRazorPages();
+         //services.AddKendo();
          services.AddCors(options =>
          {
             options.AddPolicy(name: "AllowOrigin",

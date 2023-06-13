@@ -28,6 +28,10 @@ namespace ServicesLayer.CustomerService.Implementation
       {
          return _repository.GetById(id);
       }
+      public List<CustomerInfo> GetOfficeData()
+      {
+         return _repository.GetOfficeData();
+      }
       //public void DeleteCustomer(int id)
       //{
       //   _repository.Delete(id);

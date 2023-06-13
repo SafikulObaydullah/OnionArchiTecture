@@ -2,24 +2,24 @@
 var MinistryOrDepartmentList = []
 
 
-//$(document).ready(function () { 
-//    $("#parentOffice").kendoComboBox({
-//        placeholder: 'Select Parent Office',
-//        dataTextField: "nameE",
-//        dataValueField: "id",
-//        dataSource: []
-//    });
-//    $("#ministryOrDepartment").kendoComboBox({
-//        placeholder: 'Select Ministry/Department',
-//        dataTextField: "nameE",
-//        dataValueField: "id",
-//        dataSource: []
-//    });
-//    OfficeLoad();
-//});
+$(document).ready(function () { 
+    $("#parentOffice").kendoComboBox({
+        placeholder: 'Select Parent Office',
+       dataTextField: "customerName",
+        dataValueField: "id",
+        dataSource: []
+    });
+    $("#ministryOrDepartment").kendoComboBox({
+        placeholder: 'Select Ministry/Department',
+        dataTextField: "nameE",
+        dataValueField: "id",
+        dataSource: []
+    });
+    OfficeLoad();
+});
 function OfficeLoad() {
     $.ajax({
-        url: "/Office/GetOfficeData",
+       url: "https://localhost:44395/api/Office/GetOfficeData",
         method: "GET",
         datatype: "json",
         success: function (data) {

@@ -20,7 +20,7 @@ namespace Repository
         //Get All
         public List<CustomerInfo> GetAll()
         {
-            var allCountry = new List<CustomerInfo>();
+            var allCustomer = new List<CustomerInfo>();
 
             try
             {
@@ -39,7 +39,7 @@ namespace Repository
                      customer.CustomerName = reader["customerName"].ToString();
                      customer.PurchasesProduct = reader["purchasesProduct"].ToString();
                      customer.PaymentType = reader["paymentType"].ToString();
-                     allCountry.Add(customer);
+                     allCustomer.Add(customer);
                 }
 
                 reader.Close();
@@ -56,7 +56,7 @@ namespace Repository
                     connection.Close();
                 }
             }
-            return allCountry;
+            return allCustomer;
         }
 
         //GetById

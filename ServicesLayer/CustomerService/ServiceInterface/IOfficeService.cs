@@ -13,5 +13,6 @@ namespace ServicesLayer.CustomerService.ServiceInterface
    public interface IOfficeService
    {
       CustomerInfo GetById(int id);
+      List<CustomerInfo> GetOfficeData();
    }
 }

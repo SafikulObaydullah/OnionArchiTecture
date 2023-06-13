@@ -13,5 +13,6 @@ namespace RepositoryLayer.Contracts.Configuration
         //public SaveVM Save(Office office);
         //public IEnumerable<GetOfficeVM> Get();
         public CustomerInfo GetById(int id);
+        public List<CustomerInfo> GetOfficeData();
     }
 }

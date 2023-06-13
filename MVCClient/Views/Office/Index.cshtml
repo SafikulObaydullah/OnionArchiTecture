@@ -14,8 +14,16 @@
       })
    });
  </script>*@
+
+<link href="https://kendo.cdn.telerik.com/2023.2.513/styles/kendo.common.min.css" rel="stylesheet" />
+<link href="https://kendo.cdn.telerik.com/2023.2.513/styles/kendo.default.min.css" rel="stylesheet" />
+<script src="https://kendo.cdn.telerik.com/2023.2.513/js/jquery.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2023.2.513/js/kendo.all.min.js"></script>
+
+
 <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-<script src="~/Assets/lib/CommonUI/js/casemanagement/Office.js"></script>
+<script src="~/js/office.js"></script>
+
 <div class="main_content_iner pt-0">
    <div class="container-fluid p-0">
       <div style="border-top: 1px solid #794c8a; padding: 0; background: white; border: 1px solid #7ea700; ">
@@ -30,7 +38,6 @@
             </div>
          </div>
          <div class="row" style="justify-content:center; margin-bottom:20px;">
-
             <div class="col-md-12 mt-2">
                <div id="gridUser" style="width:100%"></div>
             </div>
@@ -38,9 +45,6 @@
       </div>
    </div>
 </div>
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="mdlUserReg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
    <div class="modal-dialog modal-lg">

@@ -59,6 +59,41 @@ namespace RepositoryLayer.Contracts.Configuration
          }
          return customer;
       }
+      public List<CustomerInfo> GetOfficeData()
+      {
+         var allCustomer = new List<CustomerInfo>();
+         try
+         {
+            var command = new SqlCommand("Exec GeTAllCustomer", connection);
+
+            connection.Open();
+
+            var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+               var customer = new CustomerInfo();
+               customer.Id = Convert.ToInt16(reader["id"]);
+               customer.CustomerName = reader["customerName"].ToString();
+               customer.PurchasesProduct = reader["purchasesProduct"].ToString();
+               customer.PaymentType = reader["paymentType"].ToString();
+               allCustomer.Add(customer);
+            }
+            reader.Close();
+            connection.Close();
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine(ex.Message);
+         }
+         finally
+         {
+            if (connection.State == ConnectionState.Open)
+            {
+               connection.Close();
+            }
+         }
+         return allCustomer;
+      }
       //public IEnumerable<UserBasedOfficeVM> GetCaseUserBasedOffice(long id)
       //{
       //   var results = _db.Database.SqlQuery<UserBasedOfficeVM>("GetUserbasedOffice_SP " + id + "").ToList();
