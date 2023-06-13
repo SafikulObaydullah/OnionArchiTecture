@@ -62,8 +62,7 @@ namespace Repository
         //GetById
         public CustomerInfo GetById(int id)
         {
-            var country = new CustomerInfo();
-
+            var customer = new CustomerInfo();
             try
             {
                 var command = new SqlCommand("Exec GetByIdCustomerInfo @Id='" + id + "'", connection);
@@ -73,10 +72,10 @@ namespace Repository
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    country.Id = Convert.ToInt16(reader["id"]);
-                    country.CustomerName = reader["customerName"].ToString();
-                    country.PurchasesProduct = reader["purchasesProduct"].ToString();
-                    country.PaymentType = reader["paymentType"].ToString();
+                    customer.Id = Convert.ToInt16(reader["id"]);
+                    customer.CustomerName = reader["customerName"].ToString();
+                    customer.PurchasesProduct = reader["purchasesProduct"].ToString();
+                    customer.PaymentType = reader["paymentType"].ToString();
                 }
                 reader.Close();
                 connection.Close();
@@ -92,7 +91,7 @@ namespace Repository
                     connection.Close();
                 }
             }
-            return country;
+            return customer;
         }
 
         //Create

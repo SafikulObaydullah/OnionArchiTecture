@@ -7,17 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using DomainLayer.ViewModel.Configuration.CaseActivity;
 using DomainLayer.ViewModel;
-using DomainLayer.Models.Configuration;
 
 namespace RepositoryLayer.Contracts.Configuration
 {
     public class CaseActivityRepository : ICaseActivityRepository
     {
         private readonly DCMSDBContext _db;
+        private readonly ApplicationDbContext _context;
 
-        public CaseActivityRepository(DCMSDBContext db)
+        public CaseActivityRepository(DCMSDBContext db, ApplicationDbContext context)
         {
             _db = db;
+            _context = context;
         }
 
       public IEnumerable<CaseActivityVM> GetAllActivityByCaseId(int id)

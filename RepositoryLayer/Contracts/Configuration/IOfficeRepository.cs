@@ -1,4 +1,5 @@
-﻿using DomainLayer.Models.Configuration;
+﻿using DomainLayer.Models;
+using DomainLayer.Models.Configuration;
 using DomainLayer.ViewModel;
 using DomainLayer.ViewModel.Configuration.Office;
 using System;
@@ -8,8 +9,9 @@ namespace RepositoryLayer.Contracts.Configuration
 {
     public interface IOfficeRepository
     {
-        public IEnumerable<UserBasedOfficeVM> GetUserBasedOffice(long id);
-        public SaveVM Save(Office office);
-        public IEnumerable<GetOfficeVM> Get();
+        //public IEnumerable<UserBasedOfficeVM> GetUserBasedOffice(long id);
+        //public SaveVM Save(Office office);
+        //public IEnumerable<GetOfficeVM> Get();
+        public CustomerInfo GetById(int id);
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using Repository;
 using Repository.IRepository;
 using RepositoryLayer;
+using RepositoryLayer.Contracts.Configuration;
 using RepositoryLayer.RespositoryPattern;
 using ServicesLayer.CustomerService;
 using ServicesLayer.CustomerService.Implementation;
@@ -48,6 +49,10 @@ namespace OnionArchitecture
             services.AddTransient<ICountryService, CountryService>();
             services.AddScoped(typeof(ICustomerRepo), typeof(CustomerInfoRepo));
             services.AddTransient<ICustomerInfoService, CustomerInfoService>();
+
+
+            services.AddScoped(typeof(IOfficeRepository), typeof(OfficeRepository));
+            services.AddTransient<IOfficeService, OfficeInfoService>();
          #endregion
       }
 

@@ -2,21 +2,21 @@
 var MinistryOrDepartmentList = []
 
 
-$(document).ready(function () { 
-    $("#parentOffice").kendoComboBox({
-        placeholder: 'Select Parent Office',
-        dataTextField: "nameE",
-        dataValueField: "id",
-        dataSource: []
-    });
-    $("#ministryOrDepartment").kendoComboBox({
-        placeholder: 'Select Ministry/Department',
-        dataTextField: "nameE",
-        dataValueField: "id",
-        dataSource: []
-    });
-    OfficeLoad();
-});
+//$(document).ready(function () { 
+//    $("#parentOffice").kendoComboBox({
+//        placeholder: 'Select Parent Office',
+//        dataTextField: "nameE",
+//        dataValueField: "id",
+//        dataSource: []
+//    });
+//    $("#ministryOrDepartment").kendoComboBox({
+//        placeholder: 'Select Ministry/Department',
+//        dataTextField: "nameE",
+//        dataValueField: "id",
+//        dataSource: []
+//    });
+//    OfficeLoad();
+//});
 function OfficeLoad() {
     $.ajax({
         url: "/Office/GetOfficeData",
@@ -125,14 +125,18 @@ function Edit(id) {
     FilterData[0].isActive == false ? $('#isActive').prop('checked', false) : $('#isActive').prop('checked', true)
     $('#mdlUserReg').modal('toggle')
 }
+
+debugger;
+function Close() {
+   $('#mdlUserReg').modal('hide')
+}
 function AddNew() {
     $('#spanParentID').html(0);
     $('#nameE').val('');
     $('#nameB').val('');
     $('#description').val('');
     $('#txtAddress').val('');
-    $('#mdlUserReg').modal('toggle');
-
+   $('#mdlUserReg').modal('toggle');
 }
 
 function Validate() {
