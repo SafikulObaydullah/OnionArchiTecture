@@ -55,7 +55,8 @@ function OfficeDataBind() {
          {
             title: "Office Name English",
             field: "nameE", width: 90
-         }, {
+         },
+         {
             title: "Office Name Bangla",
             field: "nameB", width: 90
          },
